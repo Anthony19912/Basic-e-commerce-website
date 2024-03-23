@@ -1,0 +1,182 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #222;
+    color: #fff;
+}
+
+#navbar {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: auto;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.search {
+    flex: 1;
+    position: relative;
+}
+
+.search input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    width: calc(100% - 120px);
+    background-color: #444;
+    color: #fff;
+    box-shadow: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.search input[type="text"]:hover {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Search Results Styling */
+#searchResults {
+    position: absolute;
+    top: calc(100% + 8px); /* Adjusted to be below the search box */
+    left: 0;
+    width: calc(100% - 16px); /* Adjusted to match search input width */
+    max-height: 200px; /* Set max height for overflow */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#searchResults li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+#searchResults li:hover {
+    background-color: #444;
+}
+
+/* Dropdown Menu CSS */
+.cart {
+    position: relative;
+}
+
+.cart .cart-summary {
+    position: absolute;
+    top: calc(100% + 8px); /* Adjusted to be below the cart button */
+    right: -10px;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    display: none;
+    z-index: 1;
+}
+
+.cart:hover .cart-summary {
+    display: block;
+}
+
+.cart-summary:before {
+    content: "Total: ";
+    font-weight: bold;
+}
+
+/* Product List Styling */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    width: calc(33.33% - 20px);
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.product h3 {
+    margin: 0;
+}
+
+.product p {
+    margin: 10px 0;
+}
+
+.product .quantity {
+    display: flex;
+    align-items: center;
+}
+
+.product .quantity input[type="number"] {
+    width: 40px;
+    padding: 5px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.product .quantity button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: auto;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
